@@ -8,7 +8,7 @@ router.get('/users', (req: Request, res: Response) => {
   res.send(users)
 })
 
-router.get('/users/:id', (req: Request, res: Response) => {
+router.get('/:id', (req: Request, res: Response) => {
   const userId = req.params.id
   const user = userService.getUserById(userId)
   if (user) {
